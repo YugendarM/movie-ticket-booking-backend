@@ -1,6 +1,6 @@
 const mongoose = require("../models/theatreModel")
 
-const movieSchema = new mongoose.schema({
+const movieSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -51,7 +51,7 @@ const movieSchema = new mongoose.schema({
         default: 0
     },
     showTimings: [{
-        type: ISODate,  /////////////////////////////////////
+        type: Date,  /////////////////////////////////////
         required: true
     }]
 }, 

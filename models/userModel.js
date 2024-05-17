@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const userSchema = new mongoose.model({
+const userSchema = new mongoose.Schema({
     userName: {
         type: String,
         required: true
@@ -20,11 +20,9 @@ const userSchema = new mongoose.model({
     location: {
         street:{
             type: String,
-            required: true
         },
         city:{
             type: String,
-            required: true
         },
         latitude:{
             type: String,

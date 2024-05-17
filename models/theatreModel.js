@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const theatreSchema = new mongoose.model({
+const theatreSchema = new mongoose.Schema({
 
     theatreName: {
         type: String,
