@@ -1,20 +1,21 @@
 const mongoose = require("mongoose")
 
-const theatreSchema = new mongoose.model({
-
-    theatreName: {
+const userSchema = new mongoose.model({
+    userName: {
         type: String,
         required: true
-    }, 
-    theatreEmail: {
+    },
+    email: {
         type: String,
-        required: true,
+        required: true, 
         unique: true
     },
-    theatreContactNo: {
+    password: {
         type: String,
         required: true,
-        unique: true
+    },
+    phoneNo: {
+        type: String,
     },
     location: {
         street:{
@@ -32,20 +33,13 @@ const theatreSchema = new mongoose.model({
             type:String
         }
     },
-    seatingCapacity: {
+    age: {
         type: Number,
-        default: 60
     },
-    features: [{
-        type: String
-    }],
-    movies: [{
-        type: mongoose.Types.ObjectId, 
-        ref: "movies"
-    }]
-}, 
+
+},
 {
-    collection: 'theatres'
+    collection: 'users'
 })
 
-module.exports = mongoose.model('theatre', theatreSchema)
+module.exports = mongoose.model('users', userSchema)
